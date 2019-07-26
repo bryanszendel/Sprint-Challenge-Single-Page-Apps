@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import { Container, Card, Image } from 'semantic-ui-react'
+import LocationCard from './LocationCard'
 
 export default function LocationList() {
   // TODO: Add useState to track data from useEffect
@@ -24,14 +25,7 @@ export default function LocationList() {
           <Container style={{display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center"}}>
             {locationData.map((location, index) => {
               return (
-                  <Card style={{width: "20%"}} key={index}>
-                    {/* <Image src={location.image} /> */}
-                    <Card.Content>
-                      <Card.Header>{location.name}</Card.Header>
-                      <Card.Meta>Location Type: {location.type}</Card.Meta>
-                      <Card.Description>Dimensions: {location.dimension}</Card.Description>
-                    </Card.Content>
-                  </Card>
+                  <LocationCard location={location} key={index}/>
               )
             })}
           </Container>
