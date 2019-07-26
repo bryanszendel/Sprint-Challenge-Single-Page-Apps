@@ -17,7 +17,7 @@ export default function LocationList() {
     .catch(error => {
       console.log('ERROR', error)
     })
-  }, [locationData])
+  }, [])
   console.log('Location Data', locationData)
   return (
     <section className='character-list grid-view'>

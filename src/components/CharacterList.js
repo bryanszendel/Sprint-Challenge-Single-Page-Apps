@@ -17,7 +17,7 @@ export default function CharacterList() {
     .catch(error => {
       console.log('ERROR', error)
     })
-  }, [charData])
+  }, [])
   console.log(charData)
   return (
     <section className='character-list grid-view'>

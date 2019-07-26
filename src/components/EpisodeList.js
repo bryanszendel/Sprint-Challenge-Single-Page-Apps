@@ -16,7 +16,7 @@ export default function EpisodeList() {
     .catch(error => {
       console.log('ERROR', error)
     })
-  }, [episodeData])
+  }, [])
   console.log('Episode Data', episodeData)
   return (
     <section>
