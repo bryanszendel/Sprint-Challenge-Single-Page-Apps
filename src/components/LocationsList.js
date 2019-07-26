@@ -17,10 +17,10 @@ export default function LocationList() {
       console.log('ERROR', error)
     })
   }, [locationData])
-  console.log(locationData)
+  console.log('Location Data', locationData)
   return (
     <section className='character-list grid-view'>
-      <h2>LOCATIONSSS</h2>
+      <h2>LOCATIONS</h2>
           <Container style={{display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center"}}>
             {locationData.map((location, index) => {
               return (

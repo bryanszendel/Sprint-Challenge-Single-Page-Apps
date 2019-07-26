@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
-import { Container, Card } from 'semantic-ui-react'
+import { Container, Card, List } from 'semantic-ui-react'
 
-export function EpisodeList() {
+export default function EpisodeList() {
   // TODO: Add useState to track data from useEffect
   const [episodeData, setEpisodeData] = useState([])
   useEffect(() => {
@@ -11,30 +11,29 @@ export function EpisodeList() {
     axios
       .get('https://rickandmortyapi.com/api/episode/')
       .then(response => {
-        setEpisodeData(response.results)
+        setEpisodeData(response.data.results)
     })
     .catch(error => {
       console.log('ERROR', error)
     })
   }, [episodeData])
-  console.log(episodeData)
+  console.log('Episode Data', episodeData)
   return (
-    <section className='character-list grid-view'>
-      <h2>EPISODESSS</h2>
-          <Container style={{display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center"}}>
+    <section>
+      <h2>EPISODES</h2>
             {episodeData.map((episode, index) => {
               return (
-                  <Card style={{width: "20%"}} key={index}>
-                    <Card.Content>
-                      <Card.Header>{episode.name}</Card.Header>
-                      <Card.Meta>Species: {episode.species}</Card.Meta>
-                      <Card.Description>Location: {episode.name}</Card.Description>
-                      <Card.Description>Origin: {episode.name}</Card.Description>
-                    </Card.Content>
-                  </Card>
+                  <List celled style={{display: "flex", flexDirection: "column"}}>
+                    <List.Item key={index}>
+                      <List.Content>
+                        <List.Header>{episode.name}</List.Header>
+                        <List.Description>Episode: {episode.episode}</List.Description>
+                        <List.Description>Air Date: {episode.air_date}</List.Description>
+                      </List.Content>
+                    </List.Item>
+                  </List>
               )
             })}
-          </Container>
     </section>
   )
 }
