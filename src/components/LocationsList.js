@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
-import { Container, Card, Image } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import LocationCard from './LocationCard'
 
 export default function LocationList() {

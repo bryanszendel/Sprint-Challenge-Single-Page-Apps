@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
-import { Container, Card, List } from 'semantic-ui-react'
+import { List } from 'semantic-ui-react'
 
 export default function EpisodeList() {
   // TODO: Add useState to track data from useEffect

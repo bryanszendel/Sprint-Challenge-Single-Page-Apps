@@ -24,15 +24,21 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-- [ ] Explain benefit(s) using `client-side routing`?
-> Answer:
-- [ ] What does AJAX stand for?
-> Answer:
-- [ ] What are `controlled components` in React?
-> Answer:
-- [ ] Name three tools/libraries for making AJAX requests.
-> Answer:
+- [X] Explain benefit(s) using `client-side routing`?
 
+> Answer: Client-side routing allows us to develops less expensive applications. By having the browser take the bulk of the work, we don't have to spend server requests over and again. In addition, it allows us a more seamless transition between pages/tabs in our application. The data is already loaded up so we can jump between pages quickly.
+
+- [X] What does AJAX stand for?
+
+> Answer: Asynchronous JavaScript and XML. AJAX can send server requests to retrieve data in the background asynchronously without instrupting the display and behavior of our application.
+
+- [X] What are `controlled components` in React?
+
+> Answer: Controlled Components have inputs that are controlled by 'state' rather than directly in the DOM. 
+
+- [X] Name three tools/libraries for making AJAX requests.
+
+> Answer: 1. `Axios` is the main one we've used. 2. `Fetch` is fairly standard to React and becoming more common. 3. `Request` appears to be most popular and simple to use. 
 
 ## Project Set Up
 
@@ -93,9 +99,9 @@ Add a Router to this application by using [React Router](https://reacttraining.c
 - [X] Declare your 3 routes with `<Route>` components for each component created above..
 - [X] Include `/characters`, `/locations` and `/episodes` routes.
 - [X] In your `App` component, add a [tab bar](https://react.semantic-ui.com/modules/tab/#types-basic) that will use React Routers `NavLink` components to link to your different pages.
-- [ ] Make sure to use `<Link>` component instead of `<a>` elements.
+- [X] Make sure to use `<Link>` component instead of `<a>` elements.
 
-- [ ] **Make sure all tasks are complete:** Do a global search (Cmd-Shift-F in VS Code) for the string `TODO:`.
+- [X] **Make sure all tasks are complete:** Do a global search (Cmd-Shift-F in VS Code) for the string `TODO:`.
 
 > 💡**reminder:** `git commit -am 'MVP Completed'`
 
